@@ -20,15 +20,15 @@ spring:
       name: ace-gateway
   redis:
       database: 2
-      host: 47.103.130.73
+      host: 127.0.0.1
       jedis:
         pool:
             max-active: 20
   rabbitmq:
-      host: ${RABBIT_MQ_HOST:localhost}
+      host: ${RABBIT_MQ_HOST:47.103.130.73}
       port:  ${RABBIT_MQ_PORT:5672}
-      username: guest
-      password: guest
+      username: admin
+      password: admin
   sleuth:
     enabled: true
     http:
@@ -58,7 +58,7 @@ spring:
           - StripPrefix=2
      nacos:
         discovery:
-          server-addr: 127.0.0.1:8848
+          server-addr: 47.103.130.73:8848
   sentinel:
     transport:
       dashboard: localhost:8080

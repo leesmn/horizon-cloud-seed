@@ -33,10 +33,10 @@ spring:
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
   rabbitmq:
-    host: ${RABBIT_MQ_HOST:localhost}
+    host: ${RABBIT_MQ_HOST:47.103.130.73}
     port:  ${RABBIT_MQ_PORT:5672}
-    username: guest
-    password: guest
+    username: admin
+    password: admin
   sleuth:
     enabled: true
     http:
@@ -45,7 +45,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 47.103.130.73:8848
     sentinel:
       transport:
         dashboard: localhost:8080
